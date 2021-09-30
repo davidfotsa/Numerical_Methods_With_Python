@@ -81,9 +81,9 @@ def Update(Mold,Xold,Cold,N,Cnew):
         return Mold,Xold,Cold
 
 Nmax=10       
-C=[[10,15,11],[15,20,12],[15,20,18]]
-M=[[0,1/3,1/3,1/3],[0,0,1/2,1/2],[0,1/2,0,1/2],[0,1/2,1/2,0]]
-N=Generate(M)
+C=[[10,15,11],[15,20,12],[15,20,18]] #Cost Matrix
+M=[[0,1/3,1/3,1/3],[0,0,1/2,1/2],[0,1/2,0,1/2],[0,1/2,1/2,0]] # Transition Matrix
+N=Generate(M) # Asignement matrix
 
 X,c=SolCost(N,C)
 print((X,c))
