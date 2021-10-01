@@ -83,13 +83,13 @@ def CrossOverPair(C=[[10,15,10],[5,11,10],[25,30,10]],M=[[1,2,3],[2,3,1]],i=0,j=
         if (C[k][M[i][k]-1]<=C[k][M[j][k]-1]):
             l=M[i][k]
             while (l in res):
-                l=(l+1)%n
+                l=(l%n)+1
             if not(l in res):
                 res.append(l)
         else:
             l=M[j][k]
             while (l in res):
-                l=(l+1)%n
+                l=(l%n)+1
             if not(l in res):
                 res.append(l)
     return res
