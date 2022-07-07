@@ -23,15 +23,21 @@ x=poly([0,1]) # Polynôme p(x)=0+x
 p=P(x,X,Y)
 print(p)
 
+from scipy.interpolate import lagrange
+p=lagrange(X,Y)
+print(p.coef)
+    
+import numpy as np
+x=np.poly1d([0,1]) # Polynôme p(x)=0+x
 x=poly1d([1,0]) # Polynôme p(x)=0+x
 p=P(x,X,Y)
 print(p)
 print(p.order)
 print(p.coeffs)
-print(p.roots)
+#print(p.roots)
 print(roots(p))
 print(p(0))
-print(polyval(p,0))
+print(np.polyval(p,0))
 
 print("%f"%(p.coef[0],),end=" ")
 if (len(p)>1):
